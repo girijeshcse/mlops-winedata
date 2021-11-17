@@ -37,6 +37,10 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -v
+        echo "Exited with '$?
+        if $? != 0:
+            break
+        fi 
     - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
