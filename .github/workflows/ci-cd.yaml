@@ -39,7 +39,7 @@ jobs:
         pytest -v
         echo "Exited with '$?
         if $? != 0:
-            break
+            exit
         fi 
     - name: Deploy to Heroku
       env:
