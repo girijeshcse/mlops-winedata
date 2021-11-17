@@ -55,7 +55,8 @@ def validate_input(dict_request):
         schema = get_schema()
 
         if not (schema[col]["min"] <= float(dict_request[col]) <= schema[col]["max"]) :
-            raise NotInRange
+            #raise NotInRange
+            return "please eneter the value in range"
 
     for col, val in dict_request.items():
         _validate_cols(col)
